@@ -959,3 +959,10 @@ table{
     }
 
 }
+.student-photo{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #2563eb;
+}

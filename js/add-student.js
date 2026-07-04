@@ -25,6 +25,35 @@ let students = JSON.parse(localStorage.getItem("students")) || [];
 // Edit Student ID
 let editId = localStorage.getItem("editStudentId");
 
+// Student Photo
+let studentPhoto = "";
+
+// ==========================================
+// PHOTO UPLOAD
+// ==========================================
+
+const photoInput = document.getElementById("photo");
+
+photoInput.addEventListener("change", function () {
+
+    const file = this.files[0];
+
+    if (!file) return;
+
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+
+        studentPhoto = e.target.result;
+
+        document.getElementById("photoPreview").src = studentPhoto;
+
+    };
+
+    reader.readAsDataURL(file);
+
+});
+
 // ================================
 // EDIT MODE
 // ================================
@@ -40,6 +69,12 @@ if (editId) {
         document.getElementById("mobile").value = student.mobile;
         document.getElementById("email").value = student.email;
         document.getElementById("address").value = student.address;
+
+        studentPhoto = student.photo || "";
+
+        if (studentPhoto) {
+            document.getElementById("photoPreview").src = studentPhoto;
+        }
 
     }
 
@@ -113,7 +148,9 @@ form.addEventListener("submit", function (e) {
 
             address,
 
-            standard: selectedStandard
+            standard: selectedStandard,
+
+            photo: studentPhoto
 
         };
 
@@ -143,7 +180,9 @@ form.addEventListener("submit", function (e) {
 
             address,
 
-            standard: selectedStandard
+            standard: selectedStandard,
+
+            photo: studentPhoto
 
         });
 

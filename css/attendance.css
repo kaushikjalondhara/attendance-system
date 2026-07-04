@@ -247,3 +247,60 @@ footer{
     cursor: pointer;
     transform: scale(1.1);
 }
+.student-photo{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #3b82f6;
+}
+
+.student-photo{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #2563eb;
+}
+
+/* Attendance Table */
+
+.table-section table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.table-section th,
+.table-section td{
+    padding:16px 20px;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.table-section td:first-child{
+    width:90px;
+}
+
+.student-photo{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #2563eb;
+    display:block;
+    margin:auto;
+}
+
+.table-section td img{
+    display:block;
+    margin:auto;
+}
+
+.table-section input[type="radio"]{
+    transform:scale(1.2);
+    cursor:pointer;
+}
+
+.table-section tr td{
+    height:70px;
+}

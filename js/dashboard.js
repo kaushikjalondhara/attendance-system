@@ -59,12 +59,13 @@ function loadDashboard(selectedDate) {
 
         table.innerHTML = `
             <tr>
-                <td colspan="4" class="no-data">
+                <td colspan="5" class="no-data">
                     No Students Found
                 </td>
             </tr>
         `;
 
+        return;
     }
 
     classStudents.forEach(student => {
@@ -83,13 +84,17 @@ function loadDashboard(selectedDate) {
 
         if (status === "Present") {
             presentStudents++;
-        }
-        else if (status === "Absent") {
+        } else if (status === "Absent") {
             absentStudents++;
         }
 
         table.innerHTML += `
             <tr>
+
+                <td>
+                    <img src="${student.photo || 'images/default-avatar.png'}"
+                         class="student-photo">
+                </td>
 
                 <td>${student.roll}</td>
 
@@ -139,9 +144,7 @@ function loadDashboard(selectedDate) {
     } else {
 
         document.getElementById("presentStudents").textContent = "-";
-
         document.getElementById("absentStudents").textContent = "-";
-
         document.getElementById("attendancePercentage").textContent = "-";
 
     }

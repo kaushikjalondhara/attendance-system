@@ -42,7 +42,7 @@ function displayStudents(search = "") {
 
             student.name.toLowerCase().includes(search.toLowerCase()) ||
 
-            student.roll.toLowerCase().includes(search.toLowerCase())
+            student.roll.toString().includes(search)
 
         );
 
@@ -56,7 +56,7 @@ function displayStudents(search = "") {
 
         <tr>
 
-            <td colspan="5" class="no-data">
+            <td colspan="6" class="no-data">
 
                 No Students Found
 
@@ -78,6 +78,11 @@ function displayStudents(search = "") {
 
         <tr>
 
+            <td>
+                <img src="${student.photo || 'images/default-avatar.png'}"
+                     class="student-photo">
+            </td>
+
             <td>${student.roll}</td>
 
             <td>${student.name}</td>
@@ -91,7 +96,6 @@ function displayStudents(search = "") {
                 <div class="action-btn">
 
                     <button class="edit-btn"
-
                         onclick="editStudent(${student.id})">
 
                         <i class="fa-solid fa-pen"></i>
@@ -99,7 +103,6 @@ function displayStudents(search = "") {
                     </button>
 
                     <button class="delete-btn"
-
                         onclick="deleteStudent(${student.id})">
 
                         <i class="fa-solid fa-trash"></i>

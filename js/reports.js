@@ -79,20 +79,14 @@ function loadReport() {
 
     tbody.innerHTML = "";
 
-    // Dashboard Cards
-
     let totalPresent = 0;
     let totalAbsent = 0;
-
-    // Highest / Lowest
 
     let highestAttendance = -1;
     let lowestAttendance = 101;
 
     let highestStudent = "-";
     let lowestStudent = "-";
-
-    // Selected Month
 
     document.getElementById("selectedMonth").textContent =
         new Date(month + "-01").toLocaleString("default", {
@@ -102,14 +96,10 @@ function loadReport() {
 
         });
 
-    // Student Loop Starts
-
     students.forEach(student => {
 
         let present = 0;
         let absent = 0;
-
-        // Date Loop
 
         for (let date in attendance) {
 
@@ -140,28 +130,14 @@ function loadReport() {
 
         }
 
-               // ----------------------------
-        // Total Days
-        // ----------------------------
-
         const totalDays = present + absent;
-
-        // ----------------------------
-        // Attendance Percentage
-        // ----------------------------
 
         const percentage = totalDays === 0
             ? 0
             : Math.round((present / totalDays) * 100);
 
-        // Dashboard Cards
-
         totalPresent += present;
         totalAbsent += absent;
-
-        // ----------------------------
-        // Highest Attendance
-        // ----------------------------
 
         if (totalDays > 0 && percentage > highestAttendance) {
 
@@ -172,10 +148,6 @@ function loadReport() {
 
         }
 
-        // ----------------------------
-        // Lowest Attendance
-        // ----------------------------
-
         if (totalDays > 0 && percentage < lowestAttendance) {
 
             lowestAttendance = percentage;
@@ -184,14 +156,20 @@ function loadReport() {
                 student.name + " (" + percentage + "%)";
 
         }
-
-        // ----------------------------
+                // ----------------------------
         // Report Table Row
         // ----------------------------
 
         tbody.innerHTML += `
 
         <tr>
+
+            <td>
+                <img
+                    src="${student.photo || 'images/default-avatar.png'}"
+                    class="student-photo"
+                    alt="Student Photo">
+            </td>
 
             <td>${student.roll}</td>
 
@@ -213,9 +191,7 @@ function loadReport() {
 
     });
 
-    // ==================================
-
-        // ======================================
+    // ======================================
     // DASHBOARD CARDS
     // ======================================
 
@@ -253,7 +229,7 @@ function loadReport() {
         lowestStudent;
 
     // ======================================
-    // NO DATA FOUND
+    // NO STUDENTS
     // ======================================
 
     if (students.length === 0) {
@@ -262,7 +238,7 @@ function loadReport() {
 
         <tr>
 
-            <td colspan="7" class="no-data">
+            <td colspan="8" class="no-data">
 
                 No Students Found
 
@@ -275,7 +251,7 @@ function loadReport() {
     }
 
     // ======================================
-    // NO ATTENDANCE RECORD
+    // NO ATTENDANCE
     // ======================================
 
     if (
@@ -287,7 +263,7 @@ function loadReport() {
 
         <tr>
 
-            <td colspan="7" class="no-data">
+            <td colspan="8" class="no-data">
 
                 No Attendance Found For Selected Month
 
@@ -298,10 +274,13 @@ function loadReport() {
         `;
 
         document.getElementById("presentStudents").textContent = "0";
+
         document.getElementById("absentStudents").textContent = "0";
+
         document.getElementById("attendancePercentage").textContent = "0%";
 
         document.getElementById("highestAttendance").textContent = "-";
+
         document.getElementById("lowestAttendance").textContent = "-";
 
     }
