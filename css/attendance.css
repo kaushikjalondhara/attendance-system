@@ -189,3 +189,61 @@ footer{
     }
 
 }
+
+/* Attendance Date Section */
+
+.attendance-info{
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+.date-box{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.date-box label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.date-box label i{
+    color: #2563eb;
+    font-size: 20px;
+}
+
+#attendanceDate{
+    width: 180px;
+    padding: 10px 15px;
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    background: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#attendanceDate:hover{
+    border-color: #1d4ed8;
+}
+
+#attendanceDate:focus{
+    border-color: #1d4ed8;
+    box-shadow: 0 0 8px rgba(37,99,235,0.25);
+}
+
+#attendanceDate::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+    transform: scale(1.1);
+}
