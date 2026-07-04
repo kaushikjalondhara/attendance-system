@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Attendance Management System</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-school"></i>
+
+            <h2>AMS</h2>
+
+        </div>
+
+        <!-- Selected Standard -->
+
+        <div class="standard-box">
+
+            <h4>Current Standard</h4>
+
+            <h3 id="currentStandard">
+
+                Standard 1
+
+            </h3>
+
+            <a href="select-standard.html">
+
+                <i class="fa-solid fa-repeat"></i>
+
+                Change Standard
+
+            </a>
+
+        </div>
+
+        <!-- Menu -->
+
+        <ul>
+
+            <li class="active">
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="students.html">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Students
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="attendance.html">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    Attendance
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="reports.html">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    Reports
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= Main ================= -->
+
+    <main class="main">
+
+        <!-- Top Header -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+
+                    Attendance Management System
+
+                </h1>
+
+                <p>
+
+                    Welcome Teacher 👋
+
+                </p>
+
+            </div>
+
+            <div class="teacher">
+
+                <i class="fa-solid fa-user"></i>
+
+                Teacher
+
+            </div>
+
+        </header>
+
+        <!-- Dashboard Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h2 id="totalStudents">
+
+                    0
+
+                </h2>
+
+                <p>Total Students</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-user-check"></i>
+
+                <h2 id="presentStudents">
+
+                    0
+
+                </h2>
+
+                <p>Present Today</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-user-xmark"></i>
+
+                <h2 id="absentStudents">
+
+                    0
+
+                </h2>
+
+                <p>Absent Today</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                <h2 id="attendancePercentage">
+
+                    0%
+
+                </h2>
+
+                <p>Today's Attendance %</p>
+
+            </div>
+
+        </div>
+
+                <!-- ==========================
+                TODAY'S ATTENDANCE
+        =========================== -->
+<div class="table-section">
+
+    <div class="table-header">
+
+        <h2>Today's Attendance</h2>
+
+        <div class="date-section">
+
+            <label for="datePicker"><strong>Select Date :</strong></label>
+
+            <input type="date" id="datePicker">
+
+            <span style="margin-left:15px;">
+                Date :
+                <span id="todayDate"></span>
+            </span>
+
+        </div>
+
+    </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Roll No</th>
+
+                        <th>Student Name</th>
+
+                        <th>Standard</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="attendanceTable">
+
+                    <!-- JavaScript Data -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ==========================
+                QUICK ACTIONS
+        =========================== -->
+
+        <div class="quick-actions">
+
+            <h2>Quick Actions</h2>
+
+            <div class="action-box">
+
+                <a href="students.html" class="action-card">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <h3>Students</h3>
+
+                    <p>Manage Students</p>
+
+                </a>
+
+                <a href="add-student.html" class="action-card">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    <h3>Add Student</h3>
+
+                    <p>Add New Student</p>
+
+                </a>
+
+                <a href="attendance.html" class="action-card">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <h3>Attendance</h3>
+
+                    <p>Mark Today's Attendance</p>
+
+                </a>
+
+                <a href="reports.html" class="action-card">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    <h3>Reports</h3>
+
+                    <p>View Attendance Reports</p>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- ==========================
+                FOOTER
+        =========================== -->
+
+        <footer>
+
+            <p>
+
+                © 2026 Attendance Management System |
+                Developed by Kaushik
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
+
+
+

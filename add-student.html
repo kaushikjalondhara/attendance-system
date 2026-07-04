@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Student | Attendance Management System</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/add-student.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-school"></i>
+
+            <h2>AMS</h2>
+
+        </div>
+
+        <div class="standard-box">
+
+            <h4>Current Standard</h4>
+
+            <h3 id="currentStandard">
+
+                Standard 1
+
+            </h3>
+
+            <a href="select-standard.html">
+
+                <i class="fa-solid fa-repeat"></i>
+
+                Change Standard
+
+            </a>
+
+        </div>
+
+        <ul>
+
+            <li>
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li class="active">
+
+                <a href="students.html">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Students
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="attendance.html">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    Attendance
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="reports.html">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    Reports
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Add Student</h1>
+
+                <p id="currentClassText">
+
+                    Standard 1
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="form-card">
+
+            <form id="studentForm">
+
+                <div class="form-grid">
+
+                    <div class="input-box">
+
+                        <label>Roll Number</label>
+
+                        <input
+                            type="text"
+                            id="roll"
+                            placeholder="Enter Roll Number"
+                            required>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <label>Student Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter Student Name"
+                            required>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <label>Mobile Number</label>
+
+                        <input
+                            type="text"
+                            id="mobile"
+                            placeholder="Enter Mobile Number"
+                            required>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <label>Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter Email">
+
+                    </div>
+
+                    <div class="input-box full-width">
+
+                        <label>Address</label>
+
+                        <textarea
+                            id="address"
+                            rows="4"
+                            placeholder="Enter Address"></textarea>
+
+                    </div>
+
+                </div>
+
+                <div class="button-group">
+
+                    <button type="submit" class="save-btn">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+
+                        Save Student
+
+                    </button>
+
+                    <a href="students.html" class="cancel-btn">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Back
+
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+                <!-- Footer -->
+
+        <footer>
+
+            <p>
+
+                © 2026 Attendance Management System |
+                Developed by Kaushik
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- Add Student JavaScript -->
+
+<script src="js/add-student.js"></script>
+
+</body>
+
+</html>

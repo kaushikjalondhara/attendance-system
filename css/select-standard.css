@@ -1,0 +1,204 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#2563eb,#1e3a8a);
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.selection-card{
+    width:420px;
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+    text-align:center;
+    animation:fadeIn .6s ease;
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+    width:90px;
+    height:90px;
+    background:#2563eb;
+    margin:0 auto 20px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo i{
+    font-size:42px;
+    color:#fff;
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.selection-card h1{
+    color:#1e293b;
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.selection-card p{
+    color:#64748b;
+    margin-bottom:30px;
+    font-size:16px;
+}
+
+/* ===========================
+   INPUT GROUP
+=========================== */
+
+.input-group{
+    text-align:left;
+    margin-bottom:25px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#334155;
+}
+
+.input-group select{
+    width:100%;
+    padding:14px;
+    border:2px solid #dbeafe;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.input-group select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 10px rgba(37,99,235,.2);
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+button i{
+    margin-right:8px;
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .selection-card{
+        width:100%;
+        padding:30px;
+    }
+
+    .selection-card h1{
+        font-size:24px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .selection-card{
+        padding:25px;
+    }
+
+    .logo{
+        width:70px;
+        height:70px;
+    }
+
+    .logo i{
+        font-size:32px;
+    }
+
+    button{
+        font-size:16px;
+    }
+
+}

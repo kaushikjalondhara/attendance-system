@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Students | Attendance Management System</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/students.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-school"></i>
+
+            <h2>AMS</h2>
+
+        </div>
+
+        <div class="standard-box">
+
+            <h4>Current Standard</h4>
+
+            <h3 id="currentStandard">
+
+                Standard 1
+
+            </h3>
+
+            <a href="select-standard.html">
+
+                <i class="fa-solid fa-repeat"></i>
+
+                Change Standard
+
+            </a>
+
+        </div>
+
+        <ul>
+
+            <li>
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li class="active">
+
+                <a href="students.html">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Students
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="attendance.html">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    Attendance
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="reports.html">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    Reports
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Students</h1>
+
+                <p id="currentClassText">
+
+                    Standard 1 Students
+
+                </p>
+
+            </div>
+
+            <a href="add-student.html" class="add-btn">
+
+                <i class="fa-solid fa-user-plus"></i>
+
+                Add Student
+
+            </a>
+
+        </div>
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchStudent"
+                placeholder="Search Student by Name or Roll No...">
+
+        </div>
+
+        <!-- Table -->
+
+        <div class="table-section">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Roll No</th>
+
+                        <th>Name</th>
+
+                        <th>Standard</th>
+
+                        <th>Mobile</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="studentTable">
+
+                    <!-- JavaScript Data -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+                <!-- Footer -->
+
+        <footer>
+
+            <p>
+
+                © 2026 Attendance Management System |
+                Developed by Kaushik
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- Students JavaScript -->
+
+<script src="js/students.js"></script>
+
+</body>
+
+</html>
